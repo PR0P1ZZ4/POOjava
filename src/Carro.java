@@ -1,10 +1,24 @@
 public class Carro {
+    public Carro (String marca, String modelo, String cor, double motor, int ano, String descricao){
+        this.cor = cor;
+        this.descricao = descricao;
+        this.motor = motor;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.marca = marca;
+
+
+    }
+
+
+
+
     public String marca;
     public String modelo;
     public String cor;
-    public String motor;
+    public double motor;
     public int ano;
-    public String descrição;
+    public String descricao;
 
     public void mostrarInformacao (){
         System.out.println("marca:" + marca);
@@ -12,7 +26,7 @@ public class Carro {
         System.out.println("preto:" + cor);
         System.out.println("motor:" + motor);
         System.out.println("ano:" + ano);
-        System.out.println("descrição:" + descrição);
+        System.out.println("descrição:" + descricao);
 
 
 

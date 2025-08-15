@@ -1,5 +1,10 @@
 public class Aluno {
 
+    public Aluno (String nome, double nota){
+        this.nota = nota;
+        this.nome = nome;
+    }
+
     public String nome;
     public double nota;
 
