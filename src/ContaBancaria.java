@@ -1,7 +1,7 @@
 import java.sql.SQLOutput;
 
 public class ContaBancaria {
-    private String titular;
+    public String titular;
     private double saldo;
 public ContaBancaria (String titular, double saldo){
     this.titular = titular;
@@ -9,6 +9,9 @@ public ContaBancaria (String titular, double saldo){
 
 
 }
+    public double getSaldo (){
+    return saldo;
+    }
 
 
 

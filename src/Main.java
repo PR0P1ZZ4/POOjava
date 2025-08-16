@@ -21,19 +21,12 @@ public class Main {
 
         estudante2.mostrarInformacao();
 
-        ContaBancaria minhaconta = new ContaBancaria(" Samuel ",2000);
-
-        minhaconta.sacar(500);
+        ContaBancaria minhaconta = new ContaBancaria("Samuel", 1000);
         minhaconta.depositar(700);
-
-        minhaconta.exibirDados();
-        public String getNome(){
-
-        }
-        public void setNome (){
+        System.out.println(" Saldo atual " + minhaconta.getSaldo());
+        Produto meusProduto = new Produto ("Monitor",9, "Dell",27);
 
 
-        }
 
 
 

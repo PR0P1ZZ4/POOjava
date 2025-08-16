@@ -13,11 +13,33 @@ public class Produto {
     // public TIPO nome;
     //tamanho, preço, cor, unidade, marca e nome
     public String nome;
-    public double preco;
+    private double preco;
     public double tamanho;
     public String marca;
     public String cor;
-    public int unidade;
+    private int estoque;
+
+    public double getPreco () {
+        return preco;
+
+    }
+
+    public int getEstoque (){
+        return estoque;
+
+    }
+
+    public void somarEstoque (int valor){
+        estoque = estoque + valor;
+
+    }
+
+    public void setPreco(double preco) {
+        this.preco += preco;
+        if (preco < 0) {
+            System.out.println(" Erro colocar valor positivo ");
+        }
+    }
 
     // 2. metodos quais sao
     // Mostra ações do Produto
@@ -27,6 +49,7 @@ public class Produto {
         System.out.println("Marca:" + marca);
         System.out.println("Tamano" + tamanho);
         System.out.println("Cor" + cor);
+        System.out.println("estoque" + estoque);
 
     }
 }
