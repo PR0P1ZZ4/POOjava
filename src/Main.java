@@ -6,27 +6,18 @@ public class Main {
 
 
     //  TIPO NOME = new TIPO();
-    Carro carro1 = new Carro(" Chevrolet "," Opala "," Preto ",4.1,1981," 4 porta e manual");
-    //            instanciar a classe
-    carro1.mostrarInformacao();
 
-    Carro carro2 = new Carro(" Ford "," Ka "," Branco ",1.0,2018, " 4 portas manual com vidro eletrico so na frente ");
-    carro2.mostrarInformacao();
-
-        Aluno estudante = new Aluno(" Samuel",5);
-
-        estudante.mostrarInformacao();
-
-        Aluno estudante2 = new Aluno(" Julia",10);
-
-        estudante2.mostrarInformacao();
-
-        ContaBancaria minhaconta = new ContaBancaria("Samuel", 1000);
-        minhaconta.depositar(700);
-        System.out.println(" Saldo atual " + minhaconta.getSaldo());
-        Produto meusProduto = new Produto ("Monitor",9, "Dell",27);
-
-
+        Carro meuCarro = new Carro("Chevrolet",60000,4);
+        Bicicleta minhaBicicleta = new Bicicleta("Caloi", 30000,21);
+        System.out.println("Carro: " + meuCarro.getMarca() + " com " + meuCarro.getNumeroDePorta() + " portas.");
+        System.out.println("Bicicleta: " + minhaBicicleta.getMarca() + " com " + minhaBicicleta.getNumeroDeMarchas() + " marchas.");
+        Turma turmaB = new Turma("Turma de Java","Turma Java");
+         turmaB.adicionarAluno("Samuel");
+         turmaB.adicionarAluno("Julia");
+         turmaB.adicionarAluno("Matheus");
+         turmaB.adicionarAluno("Guilherme");
+         turmaB.adicionarAluno("Lucas");
+        turmaB.listarAlunos();
 
 
 
