@@ -1,37 +1,49 @@
-import java.sql.SQLOutput;
-
-public class ContaBancaria {
-    public String titular;
-    private double saldo;
-public ContaBancaria (String titular, double saldo){
-    this.titular = titular;
-    this.saldo = saldo;
-
-
-}
-    public double getSaldo (){
-    return saldo;
+public class ContaBancaria implements OperacoesConta {
+   private double saldo;
+   private String numeroConta;
+    public ContaBancaria(double saldo, String numeroConta){
+        this.saldo = saldo;
+        this.numeroConta = numeroConta;
     }
 
-
-
+    // ação de depositar
     public void depositar (double valor){
+        saldo += valor;
 
-        saldo = saldo + valor;
-        // saldo += valor; forma resumida
+    }
 
-        }
+    // ação de sacar
     public void sacar (double valor){
-        saldo -= valor;
+
+        if(saldo < valor) {
+            System.out.println(" Saque Recusado valor menor que o permitido ");
+        } else {
+            saldo -= valor;
+        }
+
 
     }
 
-    public void exibirDados (){
+    @Override
+    public void exibirdados() {
 
-        System.out.println(" Titular " + titular);
+    }
+
+    @Override
+    public double consultarSaldo() {
+        return saldo;
+    }
+
+    @Override
+    public void transferencia(ContaBancaria destino, double valor) {
+
+        sacar(valor);
+        destino.depositar(valor);
+    }
+
+    public void exibirSaldo (){
+        System.out.println(" Numero da conta " + numeroConta);
         System.out.println(" Saldo " + saldo);
-
     }
-
 
 }

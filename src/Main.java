@@ -7,21 +7,12 @@ public class Main {
 
     //  TIPO NOME = new TIPO();
 
-        Carro meuCarro = new Carro("Chevrolet",60000,4);
-        Bicicleta minhaBicicleta = new Bicicleta("Caloi", 30000,21);
-        System.out.println("Carro: " + meuCarro.getMarca() + " com " + meuCarro.getNumeroDePorta() + " portas.");
-        System.out.println("Bicicleta: " + minhaBicicleta.getMarca() + " com " + minhaBicicleta.getNumeroDeMarchas() + " marchas.");
-        Turma turmaB = new Turma("Turma de Java","Turma Java");
-         turmaB.adicionarAluno("Samuel");
-         turmaB.adicionarAluno("Julia");
-         turmaB.adicionarAluno("Matheus");
-         turmaB.adicionarAluno("Guilherme");
-         turmaB.adicionarAluno("Lucas");
-        turmaB.listarAlunos();
-
-
-
-
+        ContaBancaria minhaConta = new ContaBancaria(200,"3042");
+        ContaBancaria minhaConta2 = new ContaBancaria(200,"3041");
+        minhaConta.exibirSaldo();
+        minhaConta.depositar(3000);
+        minhaConta.sacar(100);
+        minhaConta.transferencia(minhaConta2,100);
 
 
 
